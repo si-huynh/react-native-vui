@@ -7,14 +7,14 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 
 class VuiViewManager : SimpleViewManager<View>() {
-  override fun getName() = "VuiView"
+    override fun getName() = "VuiView"
 
-  override fun createViewInstance(reactContext: ThemedReactContext): View {
-    return View(reactContext)
-  }
+    override fun createViewInstance(reactContext: ThemedReactContext): View {
+        return View(reactContext)
+    }
 
-  @ReactProp(name = "color")
-  fun setColor(view: View, color: String) {
-    view.setBackgroundColor(Color.parseColor(color))
-  }
+    @ReactProp(name = "color")
+    fun setColor(view: View, color: String) {
+        view.setBackgroundColor(Color.parseColor(color))
+    }
 }

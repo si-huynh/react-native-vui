@@ -1,12 +1,10 @@
-import { requireNativeComponent, ViewStyle } from 'react-native';
+import * as reactNative from 'react-native'
 
-type VuiProps = {
-  color: string;
-  style: ViewStyle;
-};
+interface VuiProps {
+    color: string
+    style: reactNative.ViewStyle
+}
 
-export const VuiViewManager = requireNativeComponent<VuiProps>(
-'VuiView'
-);
+export const VuiViewManager = reactNative.requireNativeComponent<VuiProps>('VuiView')
 
-export default VuiViewManager;
+export default VuiViewManager
