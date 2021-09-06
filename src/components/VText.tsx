@@ -6,7 +6,8 @@ interface Props extends TextProps {
     text: string
 }
 
-const VText: React.FC<Props> = ({ size, text, ...nativeProps }: Props) => {
+const VText: React.FC<Props> = (props) => {
+    const { size, text, ...nativeProps } = props
     const style = StyleSheet.flatten(nativeProps.style || {})
     if (size) {
         style.fontSize = size
